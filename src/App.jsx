@@ -1,11 +1,11 @@
 import {  motion, transform } from 'motion/react'
+import Contact from './Contact';
 import './App.css'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { useState, useEffect } from 'react';
-import { animate } from 'motion';
 
 function App() {
 
@@ -98,7 +98,7 @@ function App() {
   
       </section>
       
-      <section className="skills">
+      <section id='skills' className="skills">
         <h2 className='skill-header'>Skills</h2>
         <ul className='skills-main'>
           <li className='skill'>HTML</li>
@@ -110,7 +110,7 @@ function App() {
         </ul>   
       </section>
 
-      <section className="projects">
+      <section id='projects' className="projects">
         <h2 className='proj-header'>Projects</h2>
 
       <div className='container-proj'>
@@ -118,27 +118,32 @@ function App() {
           <div className='proj-cont-1'>
 
             <motion.article whileHover={{scale:1.1}} className='proj-main-1'>
-                <h3>UserAuthentication System</h3>
-                <p>Java, Servlets, JDBC, ReactJS, MySQL</p>
-                <p>
-                  Designed and developed a full-stack authentication system with user registration and login.
-                  
-                  Built backend APIs using Java Servlets and JDBC with MySQL database integration.
-                  Implemented server-side validation and used Prepared Statements to prevent SQL Injection.
-                  Deployed the application on Apache Tomcat and followed MVC architecture.
-                  Integrated ReactJS frontend forms with backend APIs
-                </p>
+             <h3>UserAuthentication System</h3>
+              <p>Java, Servlets, JDBC, ReactJS, MySQL</p>
+              <p class="proj-desc">
+                Designed and developed a full-stack authentication system with user
+                registration and login. Built backend APIs using Java Servlets and JDBC with
+                MySQL database integration. Implemented server-side validation and used
+                Prepared Statements to prevent SQL Injection. Deployed the application on
+                Apache Tomcat and followed MVC architecture. Integrated ReactJS frontend forms
+                with backend APIs.
+              </p>
+
                 <a href='https://user-authentication-frontend-seven.vercel.app/' >Live Preview</a>
               </motion.article>
 
               <motion.article whileHover={{scale:1.1}} className='proj-main-2'>
-                <h3>Nike Store – Frontend E-Commerce UI</h3>
-                <p>ReactJS, JavaScript, HTML, CSS</p>
-                <p>
-                  Developed a responsive Nike Store frontend with modern UI and reusable React components.
-                  Implemented product listing, product details, and add-to-cart UI functionality.
-                  Used React state management for cart and product interactions.
-                  Ensured mobile-first design and cross-browser compatibility
+                <h3 className="proj-title">Nike Store – Frontend E-Commerce UI</h3>
+
+                <p className="tech">
+                  ReactJS, JavaScript, HTML, CSS
+                </p>
+
+                <p className="proj-desc">
+                  Developed a responsive Nike Store frontend with modern UI and reusable React
+                  components. Implemented product listing, product details, and add-to-cart UI
+                  functionality. Used React state management for cart and product interactions.
+                  Ensured mobile-first design and cross-browser compatibility.
                 </p>
                 <a href='https://nike-shoes-frontend-ui.vercel.app/' >Live Preview</a>
               </motion.article>
@@ -156,6 +161,10 @@ function App() {
                   Implemented clean UI with real-time updates on user actions.
                   Focused on component reusability and basic user experience best practices.
                 </p>
+              </motion.article>
+
+              <motion.article whileHover={{scale:1.1}} className='proj-main-4'>
+                <h3>Add New</h3>
               </motion.article>
           </div>
       </div>
