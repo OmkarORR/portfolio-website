@@ -1,13 +1,19 @@
-import {  motion, transform } from 'motion/react'
+import {  motion} from 'motion/react'
 import Contact from './Contact';
 import './App.css'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 
 function App() {
+
+  const [open, setopen] = useState(false);
+
+  const [content, setcontent] = useState(false); 
 
   const roles = ["Frontend Developer","Web Developer"];
 
@@ -48,25 +54,53 @@ function App() {
 
   return (
     <>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/contact' element={<Contact/>}></Route>
+      </Routes>
+    
       <header className="header">
         <div className="logo">
           <motion.h1 className="logo-txt" whileHover={{scale:1.2}}>Port<span className='logo-span'>folio</span></motion.h1>
         </div>
 
-        <nav>
-          <ul className="nav-links-main">
-            <li><motion.a whileHover={{scale:1.15, transition:{duration:1.1}}} className="nav-link" href="#home">Home</motion.a></li>
-            <li><motion.a whileHover={{scale:1.15}} className="nav-link" href="#about">About</motion.a></li>
-            <li><motion.a whileHover={{scale:1.15}} className="nav-link" href="#skills">Skills</motion.a></li>
-            <li><motion.a whileHover={{scale:1.15}} className="nav-link" href="#projects">Projects</motion.a></li>
-            <li><motion.a whileHover={{scale:1.15}} className="nav-link" href="#contact">Contact</motion.a></li>
-            <motion.button whileHover={{scale:1.15}} className='btn-submit'>Download</motion.button>
-          </ul>
+        <nav id='home'>
+        <ul className="nav-links-main">
+                <li>
+                  <motion.a whileHover={{ scale: 1.15 }} className="nav-link" href="#home">
+                    Home
+                  </motion.a>
+                </li>
+
+                <li>
+                  <motion.a whileHover={{ scale: 1.15 }} className="nav-link" href="#projects">
+                    Project
+                  </motion.a>
+                </li>
+
+                <li>
+                  <motion.a whileHover={{ scale: 1.15 }} className="nav-link" href="#skills">
+                    Skills
+                  </motion.a>
+                </li>
+
+                <li>
+                  <motion.div whileHover={{ scale: 1.15 }}>
+                    <Link className="nav-link" to="/contact">
+                      Contact
+                    </Link>
+                  </motion.div>
+                </li>
+
+                <motion.a href='/Omkar Ranjane Frontend 2.pdf' whileHover={{ scale: 1.15 }} target='_blank' className="btn-submit">
+                  Download
+                </motion.a>
+              </ul>
+
         </nav>
       </header>
 
       <section className="home">
-
       <div className='home-cont'>
             <p className='home-txt-1'>Hi, I'm</p>
             <p className='home-txt-2'>Omkar Ranjane</p>
@@ -169,17 +203,18 @@ function App() {
           </div>
       </div>
       </section>
+      </BrowserRouter> 
 
       <section className="contact">
         <h2>Contact Me</h2>
         <p>Phone: 9076477156</p>
         <p>Email: oranjane010@gmail.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <p>LinkedIn: https://linkedin.com/in/omkarranjane</p>
       </section>
 
       <footer>
         <p>© 2026 Omkar. All rights reserved.</p>
-      </footer>
+      </footer> 
     </>
   )
 }
