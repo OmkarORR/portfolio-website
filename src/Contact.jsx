@@ -53,7 +53,7 @@ export default function Contact(){
                     <input type="email" className="text-input" placeholder="Email" name="email" required></input>
                     <label className="text-label">Message</label>
                     <textarea type="message" className="text-input" rows={3} placeholder="Message" name="message" required></textarea>
-                    <motion.button whileHover={{scale:1.0}} className="form-button">Send Message</motion.button>
+                    <motion.button whileHover={{scale:1.1}} className="form-button">Send Message</motion.button>
                 </div>      
             </form>
             <div className="img-contact">
