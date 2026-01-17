@@ -140,7 +140,8 @@ function App() {
           <li className='skill'>JavaScript</li>
           <li className='skill'>React</li>
           <li className='skill'>Java</li>
-          <li className='skill'>Git & GitHub</li>
+          <li className='skill'>Git</li>
+          {/* <li className='skill'>GitHub</li> */}
         </ul>   
       </section>
 
@@ -163,7 +164,7 @@ function App() {
                 with backend APIs.
               </p>
 
-                <a href='https://user-authentication-frontend-seven.vercel.app/' >Live Preview</a>
+                <a href='https://user-authentication-frontend-seven.vercel.app/' target='_blank' >Live Preview</a>
               </motion.article>
 
               <motion.article whileHover={{scale:1.1}} className='proj-main-2'>
@@ -179,7 +180,7 @@ function App() {
                   functionality. Used React state management for cart and product interactions.
                   Ensured mobile-first design and cross-browser compatibility.
                 </p>
-                <a href='https://nike-shoes-frontend-ui.vercel.app/' >Live Preview</a>
+                <a href='https://nike-shoes-frontend-ui.vercel.app/' target='_blank' >Live Preview</a>
               </motion.article>
           </div>
 
@@ -197,7 +198,7 @@ function App() {
                 </p>
               </motion.article>
 
-              <motion.article whileHover={{scale:1.1}} className='proj-main-4'>
+              <motion.article whileHover={{scale:1.1}} className='proj-main-4'  >
                 <h3>Add New</h3>
               </motion.article>
           </div>

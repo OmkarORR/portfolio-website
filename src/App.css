@@ -376,3 +376,121 @@ footer p {
   outline: none;
   
 }
+@media (max-width: 768px) {
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .logo {
+    margin-left: 0;   
+    margin-left: 5%;    
+  }
+
+  .nav-links-main {
+    margin-left: 0;      
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .home {
+    flex-direction: column;
+    height: auto;          
+  }
+
+  .home-cont {
+    width: 100%;
+    padding: 24px 16px;
+    margin-top: 40px;
+  }
+
+  .home-main2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    overflow: hidden;    
+  }
+
+  .img1 {
+    width: 70%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  /* Skills (VERY IMPORTANT) */
+  .skills {
+    overflow-x: hidden;
+  }
+
+  .skills-main {
+    overflow-x: hidden;   
+    white-space: normal;
+    gap: 20px;
+  }
+
+  /* Projects */
+  .proj-cont-1{
+    flex-direction: column;
+    height: 100%;
+  }
+  .proj-cont-2 {
+    flex-direction: column;
+    height: 80%;
+  }
+
+  .proj-main-1{
+    width: 100%;
+  }
+  .proj-main-2{
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 0px;
+    
+  }
+  .proj-main-3{
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .proj-main-4 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .img-contact{
+    display: none;
+  }
+  .form-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 25%;
+  }
+  .form-contact{
+    display: flex;
+    height: 50%;
+    width: 50%;
+  }
+  .contact-header{
+    font-size:25px;
+    margin-left: 25px;
+
+  }
+  .form-container{
+    height: 40%
+  }
+  .form{
+    margin-left: -35%;
+    width: 150%;
+    height: 150%;
+  }
+  .contact{
+    margin-top: 5%;
+  }
+}
+
+  
