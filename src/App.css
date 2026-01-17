@@ -374,7 +374,6 @@ footer p {
 .form-button:hover{
   background-color: rgb(188, 244, 244);
   outline: none;
-  
 }
 @media (max-width: 768px) {
 
@@ -382,19 +381,44 @@ footer p {
   .header {
     flex-direction: column;
     align-items: center;
-    
+    margin-bottom: -150px;
   }
 
-  .logo {   
-    margin-left: 5%;    
+  .logo {     
+    display: flex; 
+    margin-right: 70%;
+    gap: 150%;
+  }
+  .toggle-menu{
+    margin-top: 18%;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1001;
   }
 
-  .nav-links-main {
-    margin-left: 0;      
+  .nav-links-main {   
+    position: fixed;  
+    right: 2rem;
+    left: 20px;
+    top: 55px;
+    background-color: rgba(255, 255, 255, 0.3);
     gap: 20px;
-    width: 90%;
-    justify-content: center;
-    margin-top: 0px;
+    width: 27%;
+    height: 40%;
+    display: flex;
+
+    transform: translateX(100%);
+
+    visibility: hidden;
+
+    flex-direction: column;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    z-index: 1000;
+  }
+  .nav-links-main.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .home {
@@ -405,7 +429,6 @@ footer p {
   .home-cont {
     width: 90%;
     padding: 24px 16px;
-    margin-top: 40px;
   }
 
   .home-main2 {
@@ -430,7 +453,7 @@ footer p {
   .skills-main {
     overflow-x: hidden;   
     white-space: normal;
-    gap: 25px;
+    gap: 25px;  
   }
 
   /* Projects */

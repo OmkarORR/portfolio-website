@@ -5,6 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
+import { CiMenuFries } from "react-icons/ci";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -62,37 +63,39 @@ function App() {
       <header className="header">
         <div className="logo">
           <motion.h1 className="logo-txt" whileHover={{scale:1.2}}>Port<span className='logo-span'>folio</span></motion.h1>
+          <div className='toggle-menu' onClick={() => setopen(prev => !prev)}><CiMenuFries /></div>
         </div>
+        
 
         <nav id='home'>
-        <ul className="nav-links-main">
+        <ul className={`nav-links-main ${open ? "active" : ""}`}  >
                 <li>
-                  <motion.a whileHover={{ scale: 1.15 }} className="nav-link" href="#home">
+                  <motion.a onClick={()=>{setopen(false)}} whileHover={{ scale: 1.15 }} className="nav-link" href="#home">
                     Home
                   </motion.a>
                 </li>
 
                 <li>
-                  <motion.a whileHover={{ scale: 1.15 }} className="nav-link" href="#projects">
+                  <motion.a onClick={()=>{setopen(false)}} whileHover={{ scale: 1.15 }} className="nav-link" href="#projects">
                     Project
                   </motion.a>
                 </li>
 
                 <li>
-                  <motion.a whileHover={{ scale: 1.15 }} className="nav-link" href="#skills">
+                  <motion.a onClick={()=>{setopen(false)}} whileHover={{ scale: 1.15 }} className="nav-link" href="#skills">
                     Skills
                   </motion.a>
                 </li>
 
                 <li>
-                  <motion.div whileHover={{ scale: 1.15 }}>
+                  <motion.div onClick={()=>{setopen(false)}} whileHover={{ scale: 1.15 }}>
                     <Link className="nav-link" to="/contact">
                       Contact
                     </Link>
                   </motion.div>
                 </li>
 
-                <motion.a href='/Omkar Ranjane Frontend 2.pdf' whileHover={{ scale: 1.15 }} target='_blank' className="btn-submit">
+                <motion.a href='/Omkar Ranjane Frontend 2.pdf' onClick={()=>{setopen(false)}}  whileHover={{ scale: 1.15 }} target='_blank' className="btn-submit">
                   Download
                 </motion.a>
               </ul>
