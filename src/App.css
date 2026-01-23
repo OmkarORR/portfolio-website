@@ -148,12 +148,15 @@ body{
   justify-content: center;
   align-items: center;
 }
+.skills-logo-img{
+  width: 80px;
+  height: 80px;
+}
 .skills-main{
   padding: 20px 10%;
   display: flex;
   list-style: none;
   gap: 80px;
-
   overflow-x: auto;
   overflow-y: hidden;
 
@@ -162,11 +165,11 @@ body{
 
   padding-bottom: 10px;
 
-  animation: marquee 15s linear infinite ; 
+  animation: marquee 20s linear infinite ; 
 }
 @keyframes marquee {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(100%);
   }
   100% {
@@ -454,12 +457,14 @@ footer p {
     overflow-x: hidden;
   }
 
+  .home-main2{
+    margin-bottom: 20px;
+  }
   .skills-main {
     overflow-x: hidden;   
     white-space: normal;
     gap: 25px;  
   }
-
   /* Projects */
   .proj-cont-1{
     flex-direction: column;

@@ -43,7 +43,7 @@ export default function Contact(){
 
 
     return(
-        <div className="form-container" onClick={() => navigate(-1)}>
+        <motion.div className="form-container" onClick={() => navigate(-1)} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.5, ease:"easeInOut"}}>
             <form id="contact" className="form-contact" onClick={(e) => e.stopPropagation()} onSubmit={onSubmit}>
                 <h1 className="contact-header">Contact us</h1>
                 <div className="form">
@@ -59,6 +59,6 @@ export default function Contact(){
             <div className="img-contact">
                 <img src="/img-cont.png" alt="unavailable" className="img-cont"></img>
             </div>
-       </div>
+       </motion.div>
     )
 }

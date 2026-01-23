@@ -1,4 +1,4 @@
-import {  motion} from 'motion/react'
+import {  easeInOut, motion} from 'motion/react'
 import Contact from './Contact';
 import './App.css'
 import { FaLinkedin } from "react-icons/fa";
@@ -60,7 +60,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
       </Routes>
     
-      <header className="header">
+      <motion.header className="header">
         <div className="logo">
           <motion.h1 className="logo-txt" whileHover={{scale:1.2}}>Port<span className='logo-span'>folio</span></motion.h1>
           <div className='toggle-menu' onClick={() => setopen(prev => !prev)}><CiMenuFries /></div>
@@ -95,25 +95,25 @@ function App() {
                   </motion.div>
                 </li>
 
-                <motion.a href='/Omkar Ranjane Frontend 2.pdf' onClick={()=>{setopen(false)}}  whileHover={{ scale: 1.15 }} target='_blank' className="btn-submit">
+                <motion.a href='/OmkarRanjane Frontend 2.pdf' onClick={()=>{setopen(false)}}  whileHover={{ scale: 1.15 }} target='_blank' className="btn-submit">
                   Download
                 </motion.a>
               </ul>
 
         </nav>
-      </header>
+      </motion.header>
 
-      <section className="home">
+      <motion.section className="home">
       <div className='home-cont'>
-            <p className='home-txt-1'>Hi, I'm</p>
-            <p className='home-txt-2'>Omkar Ranjane</p>
-            <p className='home-txt-3'>And I'm a <span className='home-txt-3-span'>{text}</span> </p>
+            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1.0, ease: "easeOut"}} className='home-txt-1'>Hi, I'm</motion.p>
+            <motion.p  initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1.0, ease: "easeOut"}} className='home-txt-2'>Omkar Ranjane</motion.p>
+            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1.0, ease: "easeOut"}} className='home-txt-3'>And I'm a <span className='home-txt-3-span'>{text}</span> </motion.p>
             {/* <h2 className='home-txt-1'>About Me</h2> */}
-            <p className='home-txt-4'>
+            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1.0, ease: "easeOut"}} className='home-txt-4'>
               I am a passionate software developer with strong interest in
               frontend technologies and building user-friendly web applications...
-            </p>
-                <div className='sociallinks'>
+            </motion.p>
+                <motion.div className='sociallinks' initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1.0, ease: "easeOut"}}>
                    <a href='https://linkedin.com/in/omkarranjane' target='_blank' className=''>
                        <FaLinkedin color='white' size={30}/>
                    </a>
@@ -126,29 +126,36 @@ function App() {
                    <a href='https://wa.me/919076477156' target='_blank' className=''>
                         <FaWhatsappSquare color='white' size={30} />
                    </a>
-                </div>
+                </motion.div>
                 
       </div>
       <div className='home-main2'>
-        <motion.img animate={{rotate:360}} src='/img1.png' alt='Notavailable' className='img1'></motion.img>
+        <motion.img initial={{opacity:0, y:30}} whileInView={{opacity:1}} transition={{duration:1, ease:easeInOut}} src='/img1.png' alt='Notavailable' className='img1'></motion.img>
       </div>
   
-      </section>
+      </motion.section>
       
       <section id='skills' className="skills">
         <h2 className='skill-header'>Skills</h2>
         <ul className='skills-main'>
-          <li className='skill'>HTML</li>
+          <img className='skills-logo-img' src='/html-5.png' alt='error'></img>
+          <img className='skills-logo-img' src='/css-5.png' alt='error'></img>
+          <img className='skills-logo-img' src='/java-script.png' alt='error'></img>
+          <img className='skills-logo-img' src='/physics.png' alt='error'></img>
+          <img className='skills-logo-img' src='/java.png' alt='error'></img>
+          <img className='skills-logo-img' src='/git.png' alt='error'></img>
+          <img className='skills-logo-img' src='/github.png' alt='error'></img>
+          {/* <li className='skill'>HTML</li>
           <li className='skill'>CSS</li>
           <li className='skill'>JavaScript</li>
           <li className='skill'>React</li>
           <li className='skill'>Java</li>
-          <li className='skill'>Git</li>
+          <li className='skill'>Git</li> */}
           {/* <li className='skill'>GitHub</li> */}
         </ul>   
       </section>
 
-      <section id='projects' className="projects">
+      <motion.section id='projects' className="projects" initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1, ease:easeInOut}}>
         <h2 className='proj-header'>Projects</h2>
 
       <div className='container-proj'>
@@ -206,7 +213,7 @@ function App() {
               </motion.article>
           </div>
       </div>
-      </section>
+      </motion.section>
       </BrowserRouter> 
 
       <section className="contact">
