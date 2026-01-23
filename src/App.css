@@ -402,7 +402,6 @@ footer p {
     cursor: pointer;
     z-index: 1001;
   }
-
   .nav-links-main {   
     position: fixed;  
     right: 2rem;
@@ -450,6 +449,7 @@ footer p {
     width: 80%;
     max-width: 360px;
     height: auto;
+    margin-bottom:35px ;
   }
 
   /* Skills (VERY IMPORTANT) */
