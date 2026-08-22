@@ -86,6 +86,11 @@ function App() {
                     Skills
                   </motion.a>
                 </li>
+                 <li>
+                  <motion.a onClick={()=>{setopen(false)}} whileHover={{ scale: 1.15 }} className="nav-link" href="#skills">
+                    Experience
+                  </motion.a>
+                </li>
 
                 <li>
                   <motion.div onClick={()=>{setopen(false)}} whileHover={{ scale: 1.15 }}>
